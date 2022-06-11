@@ -1,16 +1,64 @@
 <!DOCTYPE html>
-<meta charset="utf-8">
-<meta name="theme-color" content="#00bb99"><!--浏览器标题栏颜色，仅对Chrome Mobile，Chrome PWA（电脑版），微信小程序和其他支持该标签的浏览器有效。-->
-<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+<meta name="theme-color" content="#00bb99">
 <html>
-    <head>
-        <title>zzChat</title>
-        <style>
+
+<head>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+  <meta charset="utf-8">
+  <title>XChat</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="imgs/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="imgs/favicon.ico">
+  <link rel="apple-touch-icon" sizes="36x36" href="imgs/36x36.png" />
+  <link rel="apple-touch-icon" sizes="48x48" href="imgs/48x48.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="imgs/72x72.png" />
+  <link rel="apple-touch-icon" sizes="96x96" href="imgs/96x96.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="imgs/144x144.png" />
+  <link rel="apple-touch-icon" sizes="192x192" href="imgs/192x192.png" />
+
+  <link rel="stylesheet" href="style.css">
+  <link id="scheme-link" rel="stylesheet" href="schemes/atelier-dune.css">
+  <link id="clear-scheme" rel="stylesheet" href="">
+
+  <link rel="stylesheet" href="vendor/katex/katex.min.css">
+  <script src="vendor/katex/katex.min.js"></script>
+  <script src="vendor/remarkable-katex/remarkableKatex.min.js"></script>
+
+  <script src="vendor/hljs/highlight.min.js"></script>
+  <link id="highlight-link" rel="stylesheet" href="vendor/hljs/styles/hybrid.min.css">
+  <script src="vendor/remarkable/remarkable.min.js"></script>
+  <style>
+    .message p {
+      word-wrap: break-word;
+
+    }
+    .message {
+      padding-top: 1rem;
+    }
+    .px10 {
+      font-size: 10px;
+    }
+    .px12 {
+      font-size: 12px;
+    }
+    .px14 {
+      font-size: 14px;
+    }
+    .px16 {
+      font-size: 16px;
+    }
+    .px18 {
+      font-size: 18px;
+    }
+    .px20 {
+      font-size: 20px;
+    }
+  </style>
+          <style>
             body{
                 font-family: "Google Sans";
                 margin: 0;
-                letter-spacing: 2px;
-		background: #ffeedd;
+                letter-spacing: 1px;
             }
 
             a.z:hover {
@@ -99,11 +147,6 @@
                 color: #333333;
             }
 
-            h1{
-                padding-left: 20px;
-                padding-right: 20px;
-            }
-
             a.a{
                 color: #ffffff;
             }
@@ -133,14 +176,8 @@
                 font-family: 'Google Sans';
                 src: url(https://fonts.gstatic.com/s/googlesans/v42/4UasrENHsxJlGDuGo1OIlJfC6l_24rlCK1Yo_Iqcsih3SAyH6cAwhX9RPjIUvQ.woff2);
             }
-
-            p{
-                padding-left: 20px;
-                padding-right: 20px;
-                color: #333;
-            }
 		
-		    ul {    /*该文档将所有ul标签均作为标题栏处理。如有需要请给此项加class。*/
+		    ul.topnav {    /*该文档将所有ul标签均作为标题栏处理。如有需要请给此项加class。*/
     		    list-style-type: none;
 	    	    margin: 0;
 		        padding: 0;
@@ -237,10 +274,6 @@
                 transition: all 0.3s linear;
 		    }
 
-            footer{
-                background: #ddccbb;
-            }
-
             img{
                 border: 0;
                 border-radius: 20px;
@@ -328,7 +361,6 @@
             p.z{
                 text-align: center;
                 font-size: small;
-                color: #888;
             }
 
             .sidenav {  /*侧边栏*/
@@ -389,19 +421,10 @@
                 text-align: center;
             }
             
-            p,h1,h2{
-                color: #444;
-            }
-            
             hr{
-                color: #666;
                 width: 85%;
                 margin-top: 10px;
                 margin-bottom: 20px;
-            }
-            
-            a{
-                color: #66ccff;
             }
         </style>
         <script>
@@ -441,9 +464,10 @@
                 document.getElementById('mySidenav').style.width='0';
             }    //侧边栏模块
         </script>
-    </head>
-    <body>
-        <ul>
+</head>
+
+<body id="body">
+            <ul class="topnav">
             <li><a class="menu" onclick="openNav()">&#9776;</a></li>
             <li><a class="top">zzChat</a></li><!--标题-->
         </ul>
@@ -459,26 +483,198 @@
             <a onclick="aHref('https://app.zzchat.cf')">客户端</a>
             <!--这里是侧边栏内容-->
         </div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <!--下面为正文内容-->
-        <h1 class="title">zzChat</h1>
-        <hr>
-        <p class="z">zzChat是一个美观、轻量级的WebSocket网络聊天室，基于<a onclick="aHref('https://github.com/hack-chat/main')">Hack.Chat</a>改编。</p>
-        <p class="z">你可以通过在网址后加上 chat.html?channel 来进入一个指定的聊天室。例如：<br><a onclick="aHref('chat.html?your-channel')">https://chat.zzchat.cf/chat.html?your-channel</a></p>
-        <hr>
-        <p class="z">公共聊天室<br><a onclick="aHref('chat.html?public')">?public</a>&nbsp;&nbsp;&nbsp;<a onclick="aHref('chat.html?English')">?English</a></p>
-        <p class="z">预设聊天室<br><a onclick="aHref('chat.html?maths')">?maths</a>&nbsp;&nbsp;&nbsp;<a onclick="aHref('chat.html?lounge')">?lounge</a><br><a onclick="aHref('chat.html?code')">?code</a>&nbsp;&nbsp;&nbsp;<a onclick="aHref('chat.html?yellow')">?yellow</a><br><a onclick="aHref('chat.html?music')">?music</a>&nbsp;&nbsp;&nbsp;<a onclick="aHref('chat.html?Vocaloid')">?Vocaloid</a></p>
-        <!--正文结束-->
-        <br>
-        <br>
-        <br>
-    </body>
-     <footer>
-            <br>
-            <p class="z">©Copyright 2017-2022 GS Team<br>UI is made with <a onclick="aHref('https://www.zzchat.cf/GAF')">GAF</a>.</p>
-            <br>
-        </footer>
+<br>
+<br>
+<br>
+<br>
+  <div id="player" style="display: none; width:100%; height:100%"></div>
+  <audio style="display: none" id="notify-sound" preload="auto" src="audio/notify.m4a">
+    <source src="audio/notify.m4a" type="audio/ogg">
+  </audio>
+  <article class="container">
+    <div id="messages" class="messages"></div>
+  </article>
+  <footer id="footer">
+    <div class="container">
+      <form id="chatform" class="message">
+        <textarea id="chatinput" type="text" autocomplete="off" autofocus></textarea>
+      </form>
+    </div>
+  </footer>
+  <nav id="sidebar">
+    <div id="sidebar-content" class="hidden">
+      <h3 style="margin-bottom: 0.3rem">账户：</h3>
+      <p>
+        <input id="auto-login" type="checkbox">
+        <label for="auto-login">下次自动登录</label>
+      </p>
+      <p>
+        <button type="button" id="clear-nick">清除用户信息</button>
+      </p>
+      <hr>
+      <h3>设置：</h3>
+      <h5>**部分需要刷新以生效**</h5>
+      <p>
+        <input id="pin-sidebar" type="checkbox">
+        <label for="pin-sidebar">固定边栏</label>
+      </p>
+      <p>
+        <input id="sound-switch" type="checkbox">
+        <label for="sound-switch">开启声音</label>
+      </p>
+      <p>
+        <input id="notify-switch" type="checkbox">
+        <label for="notify-switch">消息提示</label>
+      </p>
+      <p>
+        <input id="joined-left" type="checkbox" checked>
+        <label for="joined-left">加入/离开通知</label>
+      </p>
+      <p>
+        <input id="parse-latex" type="checkbox" checked>
+        <label for="parse-latex">开启数学公式</label>
+      </p>
+      <p>
+        <input id="syntax-highlight" type="checkbox" checked>
+        <label for="syntax-highlight">允许高亮</label>
+      </p>
+      <p>
+        <input id="allow-imgur" type="checkbox" checked>
+        <label for="allow-imgur" title="发送图片: ![标题](http://xq.kzw.ink/image.png)">允许图片</label>
+      </p>
+      <p>
+        <input id="add-old" type="checkbox" checked>
+        <label class="ao" for="add-old">记录我的信息</label>
+      </p>
+      <hr>
+      <p>
+      <h4>颜色模式</h4>
+      <select id="scheme-selector"></select>
+      </p>
+      <p>
+      <h4>高亮模式</h4>
+      <select id="highlight-selector"></select>
+      </p>
+      <p>
+      <h4>字体大小</h4>
+      <select id="font-selector">
+        <option value="px10">10px</option>
+        <option value="px12" selected>12px</option>
+        <option value="px14">14px</option>
+        <option value="px16">16px</option>
+        <option value="px18">18px</option>
+        <option value="px20">20px</option>
+      </select>
+      </p>
+      <p class="sb">
+        <h4 class="sb">显示聊天记录数量</h4>
+        <select id="old-selector" class="sb">
+          <option value="10">10条</option>
+          <option value="20" selected>20条</option>
+          <option value="30">30条</option>
+          <option value="40">40条</option>
+          <option value="50">50条</option>
+          <option value="100">所有</option>
+          <option value="1">今天所有</option>
+        </select>
+        </p>
+      <hr>
+      <p>
+        <button type="button" id="lay-video">一起看视频！</button>
+      </p>
+      <p>
+        <button type="button" id="set-bgimage">设置背景</button>
+      </p>
+      <p>
+        <button type="button" id="set-head">设置头像</button>
+      </p>
+      <!--p>
+        <button type="button" id="send-img">发送本地图片</button>
+      </p-->
+      <p>
+        <button type="button" id="clear-messages">清屏</button>
+      </p>
+      <hr>
+      <h4>在线用户</h4>
+      <p>(点击以邀请)</p>
+      <ul id="users"></ul>
+<br>
+<br>
+<br>
+<br>
+<br>
+    </div>
+  </nav>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="static/layer/layer.js"></script>
+  <script src="static/dplayer/DPlayer.min.js"></script>
+  <script src="client.js"></script>
+  <script>
+    var selector = document.querySelector("#font-selector")
+    var old_selector = document.querySelector("#old-selector")
+    window.onload = function () {
+      
+      if (localStorage.getItem("index")) {
+        selector.selectedIndex = parseInt(localStorage.getItem('index'))
+        var index = selector.selectedIndex
+        var value = selector.options[index].value
+        //document.querySelector('.message').style.fontSize = value
+        document.querySelectorAll('#messages').forEach(function (ele) {
+          ele.className = '';
+          ele.classList.add('message')
+          ele.classList.add(value)
+          console.log(ele)
+        });
+      }
+      if (localStorage.getItem("old_index")) {
+        old_selector.selectedIndex = parseInt(localStorage.getItem('old_index'))
+      }
+    }
+    
+    
+    selector.addEventListener('change', function () {
+      var index = selector.selectedIndex
+      var value = selector.options[index].value
+      //document.querySelector('.message').style.fontSize = value
+      document.querySelectorAll('#messages').forEach(function (ele) {
+        ele.className = '';
+        ele.classList.add('message')
+        ele.classList.add(value)
+        console.log(ele)
+      });
+      localStorage.setItem('index', index)
+      window.scrollTo(0, document.body.scrollHeight);
+    })
+
+    old_selector.addEventListener('change', function () {
+      var index = old_selector.selectedIndex
+      var value = old_selector.options[index].value
+      localStorage.setItem('oldnum', value)
+      localStorage.setItem('old_index', index)
+    })
+
+    //上传图片
+    /*
+    layui.use('upload', function(){
+      var upload = layui.upload;
+      
+      //执行实例
+      var uploadInst = upload.render({
+        elem: '#send-img' //绑定元素
+        ,url: '/upload/' //上传接口
+        ,done: function(res){
+          //上传完毕回调
+        }
+        ,error: function(){
+          //请求异常回调
+        }
+      });
+    });
+    */
+  </script>
+
+
+</body>
+
 </html>

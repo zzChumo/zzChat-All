@@ -1,22 +1,23 @@
 body {
-  background: #20201d;
-  color: #a6a28c;
+  background: #ffeedd;
+  color: #555;
 }
 input,
 textarea {
-  color: #a6a28c;
+  color: #555;
+  background: #ffeedd;
 }
 .message {
-  border-left: 1px solid rgba(125, 122, 104, 0.5);
+  border-left: 1px solid #aaa;
 }
 .refmessage {
-  border-left: 1px solid rgba(125, 122, 104, 1);
+  border-left: 1px solid #aaa;
 }
 .nick {
   color: #6684e1;
 }
 .trip {
-  color: #6e6b5e;
+  color: #999;
 }
 .text a {
   color: #e8e4cf;
@@ -39,10 +40,10 @@ textarea {
   color: #cfb017;
 }
 #footer {
-  background: #20201d;
+  background: #ddccbb;
 }
 #sidebar {
-  background: #292824;
+  background: #ddccbb;
   border-color: #7d7a68;
 }
 #chatform {

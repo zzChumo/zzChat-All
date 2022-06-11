@@ -303,7 +303,7 @@ function join(channel) {
 	var wsPath = location.protocol === 'https:' ? '/ws' : ':6060';
 	var wasConnected = false;
 
-	ws = new WebSocket(protocol + '//' + document.domain + wsPath);
+	ws = new WebSocket("ws://localhost:6060/chat-ws");
 
 	ws.onopen = function () {
 		var shouldConnect = true;
