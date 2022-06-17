@@ -1,50 +1,25 @@
-# hack.chat
+# zzChat
 
-[hack.chat](https://hack.chat/) is a minimal, distraction-free, accountless, logless, disappearing chat service which is easily deployable as your own service. The current client comes bundled with LaTeX rendering provided by [KaTeX](https://github.com/Khan/KaTeX) and code syntax highlighting provided by [highlight.js](https://github.com/isagalaev/highlight.js).
+[zzChat](https://zzchat.skadi.top)是一个简洁、美观的网络WebSocket聊天室，基于[Hack.Chat](https://github.com/hack-chat/main)。
 
-A list of software developed for the hack.chat framework can be found at the [3rd party software list](https://github.com/hack-chat/3rd-party-software-list) repository. This includes bots, clients, docker containers, etc.
+# 安装
 
-This is a backwards compatible continuation of the [work by Andrew Belt](https://github.com/AndrewBelt/hack.chat). The server code has been updated to ES6 along with several new features including new commands and hot-reload of the commands/protocol. There is also [documentation](documentation/DOCUMENTATION.md) and a [changelog](CHANGELOG.md).
+## 准备
 
-# Installation
+- [node.js 8.10.0](https://nodejs.org/en/download/package-manager/)及更高版本
+- [npm 5.7.1](https://nodejs.org/en/download/package-manager/)及更高版本
 
-## Prerequisites
+## 安装（对于Linux）
 
-- [node.js 8.10.0](https://nodejs.org/en/download/package-manager/#windows) or higher
-- [npm 5.7.1](https://nodejs.org/en/download/package-manager/#windows) or higher
+1. 执行`git clone https://github.com/zzChumo/zzChat-All.git`以Clone这个仓库。
+2. 执行`mv zzChat-All main && cd main`以减少不必要的麻烦。
+3. 在当前目录下执行`npm install`。
+4. 执行`cd server`。
+5. 在当前目录下再次执行`npm install`。
+6. 执行`npm config`，并填入（或跳过）salt选项、输入管理员用户名、输入管理员密码和指定WebSocket端口。
+7. 执行`cd ../`，回到上一级目录。
+8. 执行`npm start`以启动zzChat，前端在你的3000端口上。
 
-## Developer Installation
-
-1. [Clone](https://help.github.com/articles/cloning-a-repository/) the repository: `git clone https://github.com/hack-chat/main.git`
-1. Change the directory: `cd main`
-1. Install the dependencies: `npm install`
-1. Launch: `npm start`
-
-    If you change the `websocketPort` option during the config setup then these changes will need to be reflected on [line 60 of client.js](https://github.com/hack-chat/main/blob/master/client/client.js#L60).
-
-## Live Deployment Installation
-
-See [DEPLOY.md](documentation/DEPLOY.md)
-
-# Contributing
-
-- If you are modifying commands, make sure it is backwards compatible with the legacy client and you update the documentation accordingly.
-- Use [the template](documentation/templateCommand.js) to learn how to create new commands.
-- Use two space indents.
-- Name files in camelCase.
-- Scripts that do not default to strict mode (such as modules) must use the `'use strict'` directive.
-
-# Credits
-
-* [**Marzavec**](https://github.com/marzavec) - *Initial work*
-* [**MinusGix**](https://github.com/MinusGix) - *Base updates*
-* [**Neel Kamath**](https://github.com/neelkamath) - *Base Documentation*
-* [**Carlos Villavicencio**](https://github.com/po5i) - *Syntax Highlighting Integration*
-* [**OpSimple**](https://github.com/OpSimple) - *Modules Added: dumb.js & speak.js*
-* Andrew Belt, https://github.com/AndrewBelt, for original base work
-* [wwandrew](https://github.com/wwandrew), for finding server flaws (including attack vectors) and submitting ~~___incredibly detailed___~~ bug reports
-* [Everyone else](https://github.com/hack-chat/main/graphs/contributors) who participated in this project.
-
-# License
+# 声明（来自原项目）
 
 This project is licensed under the [WTFPL License](LICENSE).
