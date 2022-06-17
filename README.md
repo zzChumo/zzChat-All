@@ -18,7 +18,8 @@
 5. 在当前目录下再次执行`npm install`。
 6. 执行`npm config`，并填入（或跳过）salt选项、输入管理员用户名、输入管理员密码和指定WebSocket端口。
 7. 执行`cd ../`，回到上一级目录。
-8. 执行`npm start`以启动zzChat，前端在你的3000端口上。
+8. 执行`nano/vi/vim/gedit client/client.js`，将`ws=new WebSocket`字段改为你自己的WebSocket路径。你的WebSocket路径为`ws://<your ip or localhost>:6060/chat-ws`。
+9. 执行`npm start`以启动zzChat，前端在你的3000端口上。
 
 # 声明（来自原项目）
 
