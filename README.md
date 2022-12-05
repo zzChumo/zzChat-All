@@ -1,6 +1,6 @@
 # zzChat
 
-[zzChat](https://zzchat.skadi.top)是一个简洁、美观的网络WebSocket聊天室，基于[Hack.Chat](https://github.com/hack-chat/main)。
+[zzChat](https://zzchat.eu.org)是一个简洁、美观的网络WebSocket聊天室，基于[Hack.Chat](https://github.com/hack-chat/main)。
 
 # 安装
 
@@ -11,16 +11,12 @@
 
 ## 安装（对于Linux）
 
-1. 执行`git clone https://github.com/zzChumo/zzChat-All.git`以Clone这个仓库。
-2. 执行`mv zzChat-All main && cd main`以减少不必要的麻烦。
-3. 在当前目录下执行`npm install`。
-4. 执行`cd server`。
-5. 在当前目录下再次执行`npm install`。
-6. 执行`npm config`，并填入（或跳过）salt选项、输入管理员用户名、输入管理员密码和指定WebSocket端口。
-7. 执行`cd ../`，回到上一级目录。
-8. 执行`nano/vi/vim/gedit client/client.js`，将`ws=new WebSocket`字段改为你自己的WebSocket路径。你的WebSocket路径为`ws://<your ip or localhost>:6060/chat-ws`。
+1. 在Release页面中下载包。
+2. 执行`unzip zzChat.zip && cd main`以解压并打开包。
+3. 在当前目录下执行`npm install`，并填入（或跳过）salt选项、输入管理员用户名、输入管理员密码和指定WebSocket端口。
+8. 执行`nano/vi/vim/gedit client/zc/client.js`，将`ws=new WebSocket`字段改为你自己的WebSocket路径。你的WebSocket路径为`ws://<your ip or localhost>:6060/chat-ws`。
 9. 执行`npm start`以启动zzChat，前端在你的3000端口上。
 
-# 声明（来自原项目）
+# 声明
 
-This project is licensed under the [WTFPL License](LICENSE).
+原项目使用WTFPL协议进行开源。zzChat根据该协议规则将开源协议更改为[GSTAUL](LICENSE)。
