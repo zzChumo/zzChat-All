@@ -20,7 +20,7 @@
 
 # 声明
 
-原项目本体使用WTFPL协议进行开源，而客户端使用MIT协议进行开源。
+本项目使用GSTAUL协议进行开源。
 
 ---
 
@@ -28,15 +28,14 @@
 
 - zzChat V3可能会在寒假之前写完。
 - zzChat Client V2被雨云群友称为“屎山”“高血压代码”（悲）
-- zzChat Client V3直接推翻V2重开！
 
 # TODO
 
-- [ ] 适配Chrome Mobile 10x
-- [ ] 砍掉自定义背景
+- [x] 适配Chrome Mobile 10x
+- [x] 砍掉自定义背景
 - [x] 客户端完全简中化
 - [ ] 多语言支持
-- [ ] 客户端重写
+- [x] 客户端重写
 - [ ] 从隔壁[xjzh123/hackchat-client-plus](https://github.com/xjzh123/hackchat-client-plus)那边整点薯条
 - [ ] 自动全新配置脚本
 - [ ] 自动从新版本压缩包更新脚本
