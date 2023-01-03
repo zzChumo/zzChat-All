@@ -24,6 +24,12 @@
 
 ---
 
+# 可能的情报
+
+- zzChat V3可能会在寒假之前写完。
+- zzChat Client V2被雨云群友称为“屎山”“高血压代码”（悲）
+- zzChat Client V3直接推翻V2重开！
+
 # TODO
 
 - [ ] 适配Chrome Mobile 10x
