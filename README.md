@@ -18,6 +18,12 @@
 8. 执行`nano/vi/vim/gedit client/zc/client.js`，将`ws=new WebSocket`字段改为你自己的WebSocket路径。你的WebSocket路径为`ws://<your ip or localhost>:6060/chat-ws`。
 9. 执行`npm start`以启动zzChat，前端在你的3000端口上。
 
+## 升级（对于Linux）
+1. 在[Release](https://github.com/zzChumo/zzChat-All/releases/tag/Release)页面中下载Update包。
+2. 执行`unzip update.zip && cd update`以解压并打开包。
+3. 执行`nano/vi/vim/gedit update.sh`（如果是Android则更改update-android.sh），根据注释更改`WS`和`ZCDIR`的值。
+4. 使用root权限执行该脚本。
+
 # 声明
 
 本项目使用GSTAUL协议进行开源。
@@ -26,7 +32,6 @@
 
 # 可能的情报
 
-- zzChat V3可能会在寒假之前写完。
 - zzChat Client V2被雨云群友称为“屎山”“高血压代码”（悲）
 
 # TODO
@@ -38,5 +43,5 @@
 - [x] 客户端重写
 - [ ] 从隔壁[xjzh123/hackchat-client-plus](https://github.com/xjzh123/hackchat-client-plus)那边整点薯条
 - [ ] 自动全新配置脚本
-- [ ] 自动从新版本压缩包更新脚本
+- [x] 自动从新版本压缩包更新脚本
 
