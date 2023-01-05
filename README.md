@@ -42,6 +42,6 @@
 - [ ] 多语言支持
 - [x] 客户端重写
 - [ ] 从隔壁[xjzh123/hackchat-client-plus](https://github.com/xjzh123/hackchat-client-plus)那边整点薯条
-- [ ] 自动全新配置脚本
+- [x] 自动全新配置脚本
 - [x] 自动从新版本压缩包更新脚本
 
