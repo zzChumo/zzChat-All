@@ -12,16 +12,15 @@
 ## 安装（对于Linux）
 
 1. 在[Release](https://github.com/zzChumo/zzChat-All/releases/tag/Release)页面中下载包。
-2. 执行`unzip zzChat.zip && cd main`以解压并打开包。
-3. 在当前目录下执行`npm install`，并填入（或跳过）salt选项、输入管理员用户名、输入管理员密码和指定WebSocket端口。
-4. 执行`npm audit fix --force`以修复被压缩的服务器组件。
-8. 执行`nano/vi/vim/gedit client/zc/client.js`，将`ws=new WebSocket`字段改为你自己的WebSocket路径。你的WebSocket路径为`ws://<your ip or localhost>:6060/chat-ws`。
+2. 执行`unzip zzChat.zip && mv zzChat main && cd main`以解压并打开包。
+8. 执行`sudo nano/vi/vim/gedit update.sh`，根据注释更改`WS`和`IPXFF`的值。
+4. 执行`sudo chmod a+x update.sh && sudo ./update.sh`以执行脚本。
 9. 执行`npm start`以启动zzChat，前端在你的3000端口上。
 
 ## 升级（对于Linux）
 1. 在[Release](https://github.com/zzChumo/zzChat-All/releases/tag/Release)页面中下载Update包。
 2. 执行`unzip update.zip && cd update`以解压并打开包。
-3. 执行`nano/vi/vim/gedit update.sh`（如果是Android则更改update-android.sh），根据注释更改`WS`、`ZCDIR`和`IPXFF`的值。
+3. 执行`sudo nano/vi/vim/gedit update.sh`（如果是Android则更改update-android.sh），根据注释更改`WS`、`ZCDIR`和`IPXFF`的值。
 4. 使用root权限执行该脚本。
 
 # 声明
