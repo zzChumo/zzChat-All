@@ -1,3 +1,8 @@
+加入位于Discord的讨论！
+https://discord.gg/9FJYmYPEHp
+
+---
+
 # zzChat
 
 [zzChat](https://zzchat.eu.org)是一个简洁、美观的网络WebSocket聊天室，基于[Hack.Chat](https://github.com/hack-chat/main)。
