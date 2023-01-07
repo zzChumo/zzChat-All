@@ -25,7 +25,7 @@ https://discord.gg/9FJYmYPEHp
 ## 升级（对于Linux）
 1. 在[Release](https://github.com/zzChumo/zzChat-All/releases/tag/Release)页面中下载Update包。
 2. 执行`unzip update.zip && cd update`以解压并打开包。
-3. 执行`sudo nano/vi/vim/gedit update.sh`（如果是Android则更改update-android.sh），根据注释更改`WS`、`ZCDIR`和`IPXFF`的值。
+3. 执行`sudo nano/vi/vim/gedit update.sh`（Android设备需要指定`#!/system/xbin/bash`），根据注释更改`WS`、`ZCDIR`、`CLDIR`和`IPXFF`的值。
 4. 使用root权限执行该脚本。
 
 # 声明
