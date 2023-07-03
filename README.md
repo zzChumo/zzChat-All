@@ -1,3 +1,8 @@
+正在寻找zzChat Client？请前往   
+https://app.zzchat.cf   
+   
+---
+   
 加入位于Discord的讨论！  
 https://discord.gg/9FJYmYPEHp   
 
