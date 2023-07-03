@@ -48,6 +48,7 @@ https://afdian.net/a/zzChumo
 
 # TODO
 
+- [ ] 推出deb安装包
 - [x] 适配Chrome Mobile 10x
 - [x] 砍掉自定义背景
 - [x] 客户端完全简中化
