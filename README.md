@@ -1,7 +1,7 @@
 加入位于Discord的讨论！  
 https://discord.gg/9FJYmYPEHp   
 
-zzChat项目目前已接入爱发电。   
+zzChat项目目前已入驻爱发电。   
 https://afdian.net/a/zzChumo   
   
 ---
